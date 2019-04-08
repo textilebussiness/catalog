@@ -770,7 +770,7 @@
             url : "https://github.com/textilebussiness/catalog/tree/master/img", //folder.replace('.github.io','github.com'),
             success: function (data) {
                 //go through each item in folder
-                $.each(data, function(i,filename) {
+                $.each(JSON.parse(data), function(i,filename) {
                     console.log(filename);
                     //take each item and run into the normal preload method
                     setTimeout(function() {
