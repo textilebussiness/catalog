@@ -764,9 +764,10 @@
                //var folder = "img";
         
                var folder =  "tree/master/img";
+               folder=folder.replace('.github.io','github.com');
 
         $.ajax({
-            url : folder,
+            url : folder.replace('.github.io','github.com'),
             success: function (data) {
                 //go through each item in folder
                 $.each(data, function(i,filename) {
@@ -782,7 +783,7 @@
 
                     }, 1000);
                 });
-            }
+            },
         });  
 
             });
